@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { Home, Login, Main, Signup } from './pages';
-import Template from './components/Template';
 
 class App extends Component {
 	constructor(props) {
-		sueper(props);
+		super(props);
 		this.state = {
 			isLogin: false
 		};
 	}
+
 	render() {
 		const { isLogin } = this.state;
 		return (
@@ -25,7 +25,7 @@ class App extends Component {
 							if (isLogin) {
 								return <Redirect to="/main" />;
 							}
-							return <Redirect to="/home" />;
+							return <Redirect to="/Home" />;
 						}}
 					/>
 				</Switch>

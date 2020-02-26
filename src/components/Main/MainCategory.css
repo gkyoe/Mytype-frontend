@@ -1,0 +1,13 @@
+.MainCategory {
+	background-color: whitesmoke;
+	border: 1px solid black;
+	width: 230px;
+	height: 400px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* h3 {
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+} */
