@@ -1,21 +1,53 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { List, Shorten, Home, Login, Signup } from './pages';
+import { Home, Login, Main, Signup } from './pages';
 import Template from './components/Template';
 
-function App() {
-	return (
-		<div>
-			{/* <Template />
-			<Route exact path="/" component={Home} />
-			<Switch>
-				<Route path="/list" component={List} />
-				<Route path="/shorten" component={Shorten} />
-				<Route path="/login" component={Login} />
-				<Route path="/signup" component={Signup} />
-			</Switch> */}
-		</div>
-	);
+// function App() {
+// return (
+// 	<div>
+// 		<Switch>
+// 			<Route path='/home' render={() => <Home />} />
+// 			<Route path='/login' render={() => <Login />} />
+// 			<Route path='/Main' render={() => <Main />} />
+// 			<Route path='/Signup' render={() => <Signup />} />
+
+// 			<Route path='/' render={() => <Home />} />
+// 		</Switch>
+// 	</div>
+// );
+// }
+
+class App extends Component {
+	constructor(props) {
+		sueper(props);
+		this.state = {
+			isLogin: false
+		};
+	}
+	render() {
+		const { isLogin } = this.state;
+		return (
+			<div>
+				<Switch>
+					<Route path="/home" render={() => <Home />} />
+					<Route path="/login" render={() => <Login />} />
+					<Route path="/Main" render={() => <Main />} />
+					<Route path="/Signup" render={() => <Signup />} />
+
+					<Route
+						path="/"
+						render={() => {
+							if (isLogin) {
+								return <Redirect to="/mypage" />;
+							}
+							return <Redirect to="/login" />;
+						}}
+					/>
+				</Switch>
+			</div>
+		);
+	}
 }
 
 export default App;
