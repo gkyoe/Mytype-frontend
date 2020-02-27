@@ -4,11 +4,12 @@ import './ContentList.css';
 
 const fakeData = [1, 2, 3, 4];
 
-const ContentList = () => {
+const ContentList = props => {
+	const { videoList } = props;
 	return (
 		<div className="ContentList">
-			{fakeData.map(x => (
-				<ContentListEntry />
+			{videoList.map(x => (
+				<ContentListEntry video={x} />
 			))}
 		</div>
 	);

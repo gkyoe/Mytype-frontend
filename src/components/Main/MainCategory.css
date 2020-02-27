@@ -7,6 +7,13 @@
 	text-align: center;
 }
 
+.main-category-entry-button {
+	margin-top: 20px;
+	width: 227px;
+	height: 35px;
+	font-size: 0.83em;
+}
+
 /* h3 {
 	margin-block-start: 0.5em;
 	margin-block-end: 0.5em;

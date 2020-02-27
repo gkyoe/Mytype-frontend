@@ -1,13 +1,33 @@
 .ContentListEntry {
 	float: left;
-	width: 300px;
+	width: 260px;
 	height: 200px;
+	margin-bottom: 55px;
 }
 
 .ContentList {
 	border: 1px solid black;
 	background-color: whitesmoke;
-	height: 200px;
-	width: 1320px;
+	height: 240px;
+	width: 1315px;
 	margin-top: 15px;
+	padding: 10px;
+	overflow: auto;
+}
+
+.content-list-entry-title {
+	font-weight: bold;
+	width: 250px;
+	cursor: pointer;
+}
+
+.content-list-entry-image {
+	width: 250px;
+	height: 150px;
+	cursor: pointer;
+}
+
+.content-list-entry-description {
+	width: 250px;
+	cursor: pointer;
 }

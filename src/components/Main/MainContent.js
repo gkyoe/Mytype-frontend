@@ -1,9 +1,13 @@
 import React from 'react';
 
-const MainContent = () => {
+const MainContent = props => {
 	return (
 		<div>
-			<iframe className="iframe">MainContent</iframe>
+			<iframe
+				className="iframe"
+				src={'https://www.youtube.com/embed/' + props.mainVideo.id.videoId}
+				allowFullScreen
+			></iframe>
 		</div>
 	);
 };

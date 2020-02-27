@@ -3,7 +3,7 @@ import React from 'react';
 const UserCategoryEntry = props => {
 	return (
 		<div className="UserCategoryEntry">
-			<button>{props.category}</button>
+			<button className="user-category-entry-button">{props.category}</button>
 		</div>
 	);
 };

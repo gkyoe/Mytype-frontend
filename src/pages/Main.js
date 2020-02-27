@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import {
 	ContentList,
 	MainCategory,
@@ -6,14 +8,16 @@ import {
 	UserCategory
 } from '../components/Main';
 import './Main.css';
+import * as MainCategoryActions from '../modules/changeMainContent';
 
 class Main extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
+	componentDidMount() {
+		this.props.MainCategoryActions.getVideos(1);
 	}
 
 	render() {
+		const { mainVideo, videoList } = this.props;
+		if (mainVideo === null) return <h1>Loading...</h1>;
 		return (
 			<div className="Main">
 				<div className="col15 float_left">
@@ -24,8 +28,8 @@ class Main extends Component {
 					<div className="height100">
 						<button className="logout_button">로그아웃</button>
 					</div>
-					<MainContentBox />
-					<ContentList />
+					<MainContentBox mainVideo={mainVideo} />
+					<ContentList videoList={videoList} />
 				</div>
 
 				{/* <UserCategory />
@@ -36,4 +40,13 @@ class Main extends Component {
 	}
 }
 
-export default Main;
+// export default Main;
+export default connect(
+	state => ({
+		mainVideo: state.changeMainContent.mainVideo,
+		videoList: state.changeMainContent.videoList
+	}),
+	dispatch => ({
+		MainCategoryActions: bindActionCreators(MainCategoryActions, dispatch)
+	})
+)(Main);

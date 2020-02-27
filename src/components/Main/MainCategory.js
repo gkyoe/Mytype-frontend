@@ -13,7 +13,11 @@ const MainCategory = () => {
 		<div className="MainCategory">
 			<h3>카테고리</h3>
 			{categoryList.map(x => (
-				<MainCategoryEntry key={categoryList.indexOf(x)} category={x} />
+				<MainCategoryEntry
+					id={categoryList.indexOf(x) + 1}
+					key={categoryList.indexOf(x)}
+					category={x}
+				/>
 			))}
 		</div>
 	);
