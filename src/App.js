@@ -25,7 +25,7 @@ class App extends Component {
 							if (isLogin) {
 								return <Redirect to="/main" />;
 							}
-							return <Redirect to="/home" />;
+							return <Redirect to="/Home" />;
 						}}
 					/>
 				</Switch>

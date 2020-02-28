@@ -37,6 +37,7 @@ function HomeCategory() {
 					data.map(item => (
 						<HomeCategoryEntry
 							key={item.id}
+							id={item.id}
 							title={item.title}
 							image={item.image}
 						/>

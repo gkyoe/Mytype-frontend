@@ -1,0 +1,25 @@
+.UserCategory {
+	background-color: whitesmoke;
+	border: 1px solid black;
+	width: 230px;
+	height: 400px;
+	text-align: center;
+}
+
+.bottom-position {
+	position: absolute;
+	top: 835px;
+	left: 128px;
+}
+
+.buttonSize {
+	width: 80px;
+	height: 35px;
+	font-size: 1.2em;
+}
+
+.user-category-entry-button {
+	width: 227px;
+	height: 35px;
+	margin-top: 20px;
+}
