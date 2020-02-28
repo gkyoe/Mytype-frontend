@@ -1,0 +1,12 @@
+.home-category-image {
+	width: 220px;
+	height: 160px;
+}
+
+.home-category-entry {
+	margin: 70px 20px 0;
+	/* border: 2px solid black; */
+	display: inline-block;
+	width: 220px;
+	height: 200px;
+}
