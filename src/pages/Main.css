@@ -19,6 +19,19 @@
 	width: 110px;
 	height: 35px;
 	font-size: 1.2em;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.login_button {
+	position: absolute;
+	top: 70px;
+	left: 1430px;
+	width: 110px;
+	height: 35px;
+	font-size: 1.2em;
+	cursor: pointer;
+	border-radius: 5px;
 }
 
 .height100 {

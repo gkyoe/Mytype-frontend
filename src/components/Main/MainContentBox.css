@@ -39,4 +39,6 @@
 	width: 200px;
 	height: 40px;
 	font-size: 1.2em;
+	cursor: pointer;
+	border-radius: 5px;
 }
