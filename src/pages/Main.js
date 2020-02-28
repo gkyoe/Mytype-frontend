@@ -11,10 +11,6 @@ import './Main.css';
 import * as MainCategoryActions from '../modules/changeMainContent';
 
 class Main extends Component {
-	componentDidMount() {
-		this.props.MainCategoryActions.getVideos(1);
-	}
-
 	render() {
 		const { mainVideo, videoList } = this.props;
 		if (mainVideo === null) return <h1>Loading...</h1>;
@@ -31,10 +27,6 @@ class Main extends Component {
 					<MainContentBox mainVideo={mainVideo} />
 					<ContentList videoList={videoList} />
 				</div>
-
-				{/* <UserCategory />
-			<MainContentBox />
-			<ContentList /> */}
 			</div>
 		);
 	}

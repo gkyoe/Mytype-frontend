@@ -15,14 +15,20 @@ function getVideosAPI(id) {
 	return axios.get(`http://localhost:3001/videos/${id}`);
 }
 
-export const getVideos = id => dispatch => {
+export const getVideos = (id, callback) => dispatch => {
 	return getVideosAPI(id).then(result => {
 		dispatch({
 			type: CHANGE_MAIN_CONTENT,
 			payload: result.data
 		});
+		callback && callback();
 	});
 };
+
+// export const getVideosAndChangePage = id => dispatch => {
+// 	getVideos(id)
+
+// }
 
 export const changeMainVideo = video => dispatch => {
 	return dispatch({
