@@ -1,0 +1,52 @@
+body {
+	margin-left: 1%;
+}
+
+.signup-page-title {
+	margin: 100px 0 30px 0;
+}
+
+.signup-table {
+	/* border: 1px solid #bcbcbc; */
+	width: 450px;
+	height: 180px;
+	table-layout: fixed;
+	font-size: 12pt;
+	margin-bottom: 30px;
+}
+
+.signup-tb-left {
+	/* border: 1px solid #bcbcbc; */
+	width: 20%;
+	font: 8px;
+}
+
+.signup-tb-right {
+	/* border: 1px solid #bcbcbc; */
+	width: 80%;
+}
+
+td {
+	/* border: 1px solid #bcbcbc; */
+	width: 400px;
+}
+
+.signup-input-box {
+	width: 98%;
+	height: 70%;
+}
+
+.signup-submit-button {
+	width: 60px;
+	height: 25px;
+	text-align: center;
+	border-radius: 5px;
+	margin-top: 30px;
+}
+.table-right-submit {
+	text-align: right;
+}
+
+.signup-input-box {
+	height: 25px;
+}

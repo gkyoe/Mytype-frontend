@@ -1,0 +1,53 @@
+.login-page-title {
+	margin: 100px 0 50px 0;
+}
+
+.login-table {
+	/* border: 1px solid #bcbcbc; */
+	width: 450px;
+	height: 50px;
+	table-layout: fixed;
+	font-size: 12pt;
+	margin-bottom: 10px;
+}
+
+tr {
+	width: 450px;
+	height: 50px;
+}
+
+.login-tb-left {
+	/* border: 1px solid #bcbcbc; */
+	width: 20%;
+	font: 8px;
+}
+
+.login-tb-right {
+	/* border: 1px solid #bcbcbc; */
+	width: 80%;
+}
+
+td {
+	/* border: 1px solid #bcbcbc; */
+	width: 400px;
+}
+
+.login-input-box {
+	width: 98%;
+	height: 60%;
+}
+
+.login-submit-button {
+	width: 60px;
+	height: 25px;
+	text-align: center;
+	border-radius: 5px;
+	margin: 10px 5px 0 0;
+}
+.loginpage-signup-submit-button {
+	width: 60px;
+	height: 25px;
+	text-align: center;
+	border-radius: 5px;
+	margin: 10px 0 0 5px;
+}
