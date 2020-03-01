@@ -12,7 +12,8 @@ const initialState = {
 
 function getVideosAPI(id) {
 	// 배포시 수정할 url
-	return axios.get(`http://18.191.169.207:3001/videos/${id}`);
+	// return axios.get(`http://18.191.169.207:3001/videos/${id}`);
+	return axios.get(`http://localhost:3001/videos/${id}`);
 }
 
 export const getVideos = (id, callback) => dispatch => {
