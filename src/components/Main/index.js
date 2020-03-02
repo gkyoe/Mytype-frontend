@@ -8,4 +8,4 @@ export { default as MainContentBox } from './MainContentBox';
 export { default as UserCategory } from './UserCategory';
 export { default as UserCategoryEntry } from './UserCategoryEntry';
 export { default as Loginout } from './Loginout';
-export { default as Modal } from './Modal';
+export { default as ModalBox } from './ModalBox';

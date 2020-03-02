@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import reactModal from 'react-modal';
 import {
 	ContentList,
 	MainCategory,
@@ -13,7 +14,42 @@ import './Main.css';
 import * as MainCategoryActions from '../modules/changeMainContent';
 import * as ChangeModalState from '../modules/changeModalState';
 
+const customStyles = {
+	content: {
+		top: '50%',
+		left: '50%',
+		right: 'auto',
+		bottom: 'auto',
+		marginRight: '-50%',
+		transform: 'translate(-50%, -50%)'
+	}
+};
+
+reactModal.setAppElement(document.getElementById('root'));
+
 class Main extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			currentSource: '',
+			modalIsOpen: false,
+			nowEditing: false,
+			nowSaving: false,
+			currentItem: {
+				id: null,
+				body: null,
+				status: null
+			}
+		};
+		this.toggleModal = this.toggleModal.bind(this);
+	}
+
+	toggleModal() {
+		this.setState(prevState => ({
+			modalIsOpen: !prevState.modalIsOpen
+		}));
+	}
+
 	render() {
 		const { mainVideo, videoList, isLogin } = this.props;
 		if (mainVideo === null) return <h1>Loading...</h1>;
