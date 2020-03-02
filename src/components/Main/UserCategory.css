@@ -27,3 +27,14 @@
 	cursor: pointer;
 	border-radius: 5px;
 }
+
+.category-name-input {
+	width: 280px;
+	height: 35px;
+}
+
+.modal-button {
+	margin: 5px;
+	width: 60px;
+	height: 30px;
+}
