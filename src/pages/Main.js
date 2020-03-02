@@ -5,14 +5,17 @@ import {
 	ContentList,
 	MainCategory,
 	MainContentBox,
-	UserCategory
+	UserCategory,
+	Loginout,
+	Modal
 } from '../components/Main';
 import './Main.css';
 import * as MainCategoryActions from '../modules/changeMainContent';
+import * as ChangeModalState from '../modules/changeModalState';
 
 class Main extends Component {
 	render() {
-		const { mainVideo, videoList } = this.props;
+		const { mainVideo, videoList, isLogin } = this.props;
 		if (mainVideo === null) return <h1>Loading...</h1>;
 		return (
 			<div className="Main">
@@ -22,7 +25,7 @@ class Main extends Component {
 				</div>
 				<div className="col80 float_left">
 					<div className="height100">
-						<button className="logout_button">로그아웃</button>
+						<Loginout isLogin={isLogin} />
 					</div>
 					<MainContentBox mainVideo={mainVideo} />
 					<ContentList videoList={videoList} />
@@ -36,9 +39,13 @@ class Main extends Component {
 export default connect(
 	state => ({
 		mainVideo: state.changeMainContent.mainVideo,
-		videoList: state.changeMainContent.videoList
+		videoList: state.changeMainContent.videoList,
+		isLogin: state.login.isLogin,
+		modalOn: state.changeModalState.modalOn,
+		modalType: state.changeModalState.modalType
 	}),
 	dispatch => ({
-		MainCategoryActions: bindActionCreators(MainCategoryActions, dispatch)
+		MainCategoryActions: bindActionCreators(MainCategoryActions, dispatch),
+		ChangeModalState: bindActionCreators(ChangeModalState, dispatch)
 	})
 )(Main);

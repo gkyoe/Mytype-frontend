@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import { Router } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import * as LoginActions from '../modules/login';
 
 class Login extends Component {
 	constructor(props) {
@@ -10,9 +14,27 @@ class Login extends Component {
 			email: '',
 			password: ''
 		};
+		this.handleInputValue = this.handleInputValue.bind(this);
 	}
 
+	handleInputValue = key => e => {
+		this.setState({ [key]: e.target.value });
+	};
+
 	render() {
+		console.log(this.props.loginResponse);
+		const { LoginActions } = this.props;
+		if (this.props.loginResponse === true) {
+			alert('로그인에 성공하였습니다.');
+			this.props.history.push('/home');
+		} else if (this.props.loginResponse === false) {
+			alert('존재하지 않는 이메일 또는 비밀번호입니다.');
+			LoginActions.initLoginState();
+		}
+		const data = {
+			email: this.state.email,
+			password: this.state.password
+		};
 		return (
 			<div>
 				<center>
@@ -22,6 +44,7 @@ class Login extends Component {
 							<th className="login-tb-left">이메일</th>
 							<td className="login-tb-right">
 								<input
+									onChange={this.handleInputValue('email')}
 									className="login-input-box"
 									type="email"
 									name="email"
@@ -33,6 +56,7 @@ class Login extends Component {
 							<th className="login-tb-left">비밀번호</th>
 							<td className="login-tb-right">
 								<input
+									onChange={this.handleInputValue('password')}
 									className="login-input-box"
 									type="password"
 									name="password"
@@ -42,7 +66,12 @@ class Login extends Component {
 						</tr>
 					</table>
 					<div>
-						<button className="login-submit-button">로그인</button>
+						<button
+							onClick={() => LoginActions.postLogin(data)}
+							className="login-submit-button"
+						>
+							로그인
+						</button>
 						<Link to="./signup">
 							<button className="loginpage-signup-submit-button">
 								회원가입
@@ -55,4 +84,13 @@ class Login extends Component {
 	}
 }
 
-export default Login;
+Login = connect(
+	state => ({
+		loginResponse: state.login.loginResponse
+	}),
+	dispatch => ({
+		LoginActions: bindActionCreators(LoginActions, dispatch)
+	})
+)(Login);
+
+export default withRouter(Login);
