@@ -37,11 +37,12 @@ td {
 }
 
 .signup-submit-button {
-	width: 60px;
-	height: 25px;
+	width: 80px;
+	height: 30px;
 	text-align: center;
 	border-radius: 5px;
-	margin-top: 30px;
+	margin-top: 10px;
+	font-size: 1em;
 }
 .table-right-submit {
 	text-align: right;
@@ -49,4 +50,8 @@ td {
 
 .signup-input-box {
 	height: 25px;
+}
+
+.invalid-feedback {
+	color: red;
 }

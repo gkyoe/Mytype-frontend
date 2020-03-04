@@ -1,39 +1,36 @@
 import { handleActions } from 'redux-actions';
 
-const MODAL_STATE_ON = 'MODAL_STATE_ON';
-const MODAL_STATE_OFF = 'MODAL_STATE_OFF';
+const CHANGE_DELETE_MODAL_TO_TRUE = 'CHANGE_DELETE_MODAL_TO_TRUE';
+const CHANGE_DELETE_MODAL_TO_FALSE = 'CHANGE_DELETE_MODAL_TO_FALSE';
 
 const initialState = {
-	modalOn: false,
-	modalType: null
+	isDeleteModal: false
 };
 
-export const modalOn = type => dispatch => {
+export const toTrue = () => dispatch => {
 	return dispatch({
-		type: MODAL_STATE_ON,
-		payload: type
+		type: CHANGE_DELETE_MODAL_TO_TRUE
 	});
 };
 
-export const modalOff = () => dispatch => {
+export const toFalse = () => dispatch => {
 	return dispatch({
-		type: MODAL_STATE_OFF
+		type: CHANGE_DELETE_MODAL_TO_FALSE
 	});
 };
 
 export default handleActions(
 	{
-		[MODAL_STATE_ON]: (state, action) => {
+		[CHANGE_DELETE_MODAL_TO_TRUE]: (state, action) => {
 			return {
 				...state,
-				modalOn: true,
-				modalType: action.payload
+				isDeleteModal: true
 			};
 		},
-		[MODAL_STATE_OFF]: (state, action) => {
+		[CHANGE_DELETE_MODAL_TO_FALSE]: (state, action) => {
 			return {
 				...state,
-				modalOn: false
+				isDeleteModal: false
 			};
 		}
 	},

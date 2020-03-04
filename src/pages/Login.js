@@ -22,11 +22,12 @@ class Login extends Component {
 	};
 
 	render() {
-		console.log(this.props.loginResponse);
 		const { LoginActions } = this.props;
 		if (this.props.loginResponse === true) {
 			alert('로그인에 성공하였습니다.');
-			this.props.history.push('/home');
+			LoginActions.initLoginState();
+			// localStorage.setItem('isLogin', true);
+			this.props.history.push('/main');
 		} else if (this.props.loginResponse === false) {
 			alert('존재하지 않는 이메일 또는 비밀번호입니다.');
 			LoginActions.initLoginState();

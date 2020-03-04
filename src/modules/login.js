@@ -7,8 +7,10 @@ const POST_SIGNUP_SUCCESS = 'POST_SIGNUP_SUCCESS';
 const POST_SIGNUP_FAILURE = 'POST_SIGNUP_FAILUER';
 const INIT_SIGNUP_STATE = 'INIT_SIGNUP_STATE';
 const INIT_LOGIN_STATE = 'INIT_LOGIN_STATE';
-
+const KEEP_LOGIN_STATE = 'KEKP_LOGIN_STATE';
 const LOGOUT = 'LOGOUT';
+
+// axios.defaults.withCredentials = true
 
 const initialState = {
 	isLogin: false,
@@ -17,13 +19,13 @@ const initialState = {
 };
 
 function postSignupAPI(data) {
-	// return axios.post('http://18.191.169.207:3001/user/signup', data);
-	return axios.post('http://localhost:3001/user/signup', data);
+	return axios.post('http://18.191.169.207:3001/user/signup', data);
+	// return axios.post('http://localhost:3001/user/signup', data);
 }
 
 function postLoginAPI(data) {
-	// return axios.post('http://18.191.169.207:3001/user/signin', data);
-	return axios.post('http://localhost:3001/user/signin', data);
+	return axios.post('http://18.191.169.207:3001/user/signin', data);
+	// return axios.post('http://localhost:3001/user/signin', data);
 }
 
 export const postSignup = data => dispatch => {
@@ -46,6 +48,7 @@ export const postSignup = data => dispatch => {
 export const postLogin = data => dispatch => {
 	return postLoginAPI(data)
 		.then(result => {
+			localStorage.setItem('token', result.data.token);
 			if (result.status === 200) {
 				dispatch({
 					type: POST_LOGIN_SUCCESS
@@ -60,6 +63,12 @@ export const postLogin = data => dispatch => {
 		});
 };
 
+export const keepLoginState = () => dispatch => {
+	return dispatch({
+		type: KEEP_LOGIN_STATE
+	});
+};
+
 export const initSignupState = () => dispatch => {
 	return dispatch({
 		type: INIT_SIGNUP_STATE
@@ -69,6 +78,12 @@ export const initSignupState = () => dispatch => {
 export const initLoginState = () => dispatch => {
 	return dispatch({
 		type: INIT_LOGIN_STATE
+	});
+};
+
+export const logout = () => dispatch => {
+	return dispatch({
+		type: LOGOUT
 	});
 };
 
@@ -109,6 +124,18 @@ export default handleActions(
 			return {
 				...state,
 				loginResponse: null
+			};
+		},
+		[LOGOUT]: (state, action) => {
+			return {
+				...state,
+				isLogin: false
+			};
+		},
+		[KEEP_LOGIN_STATE]: (state, action) => {
+			return {
+				...state,
+				isLogin: true
 			};
 		}
 	},
