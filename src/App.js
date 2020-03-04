@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import { Home, Login, Main, Signup } from './pages';
-import * as LoginActions from './modules/login';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { Home, Login, Main, Signup } from './pages';
+import * as LoginActions from './modules/login';
 
 class App extends Component {
 	constructor(props) {

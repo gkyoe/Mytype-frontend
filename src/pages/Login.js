@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './Login.css';
-import { Router } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import * as LoginActions from '../modules/login';
+import { GoogleLogin } from 'react-google-login';
 
 class Login extends Component {
 	constructor(props) {
@@ -26,7 +25,6 @@ class Login extends Component {
 		if (this.props.loginResponse === true) {
 			alert('로그인에 성공하였습니다.');
 			LoginActions.initLoginState();
-			// localStorage.setItem('isLogin', true);
 			this.props.history.push('/main');
 		} else if (this.props.loginResponse === false) {
 			alert('존재하지 않는 이메일 또는 비밀번호입니다.');

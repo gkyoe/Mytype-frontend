@@ -15,7 +15,7 @@ let ContentListEntry = props => {
 		video: video
 	};
 	const postDeleteVideoInUserCategory = data => {
-		return axios.post('http://18.191.169.207:3001/user/deleteVideo', data, {
+		return axios.post('http://localhost:3001/user/deleteVideo', data, {
 			headers: {
 				authorization: JSON.stringify(localStorage.getItem('token'))
 			}

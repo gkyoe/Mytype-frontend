@@ -66,16 +66,6 @@ const MainContentBox = props => {
 						내 카테고리에 추가
 					</button>
 				)}
-				{/* {isUserCategory ? (
-					<button>카테고리 편집</button>
-				) : (
-					<button
-						onClick={openModal}
-						className="addMyCate margin_right float_right"
-					>
-						내 카테고리에 추가
-					</button>
-				)} */}
 			</div>
 			<div className="col28 float_left">
 				<MainContentDescription mainVideo={mainVideo} />

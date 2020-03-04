@@ -13,8 +13,10 @@ const initialSatate = {
 	userCategoryList: []
 };
 
+const url = 'http://localhost:3001';
+
 function postAddUserCategoryAPI(data) {
-	return axios.post('http://18.191.169.207:3001/user/addCategory', data, {
+	return axios.post(`${url}/user/addCategory`, data, {
 		headers: {
 			authorization: JSON.stringify(localStorage.getItem('token'))
 		}
@@ -22,7 +24,7 @@ function postAddUserCategoryAPI(data) {
 }
 
 function postDeleteUserCategoryAPI(data) {
-	return axios.post('http://18.191.169.207:3001/user/deleteCategory', data, {
+	return axios.post(`${url}/user/deleteCategory`, data, {
 		headers: {
 			authorization: JSON.stringify(localStorage.getItem('token'))
 		}
@@ -30,7 +32,7 @@ function postDeleteUserCategoryAPI(data) {
 }
 
 function getUserCategoryListAPI() {
-	return axios.get('http://18.191.169.207:3001/user/categoryList', {
+	return axios.get(`${url}/user/categoryList`, {
 		headers: {
 			authorization: JSON.stringify(localStorage.getItem('token'))
 		}
@@ -38,7 +40,7 @@ function getUserCategoryListAPI() {
 }
 
 function postVideoToUserCategoryAPI(data) {
-	return axios.post('http://18.191.169.207:3001/user/addVideo', data, {
+	return axios.post(`${url}/user/addVideo`, data, {
 		headers: {
 			authorization: JSON.stringify(localStorage.getItem('token'))
 		}

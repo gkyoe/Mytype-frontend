@@ -10,7 +10,7 @@ const INIT_LOGIN_STATE = 'INIT_LOGIN_STATE';
 const KEEP_LOGIN_STATE = 'KEKP_LOGIN_STATE';
 const LOGOUT = 'LOGOUT';
 
-// axios.defaults.withCredentials = true
+axios.defaults.withCredentials = true;
 
 const initialState = {
 	isLogin: false,
@@ -18,13 +18,15 @@ const initialState = {
 	signupResponse: null
 };
 
+const url = 'http://localhost:3001';
+
 function postSignupAPI(data) {
-	return axios.post('http://18.191.169.207:3001/user/signup', data);
+	return axios.post(`${url}/user/signup`, data);
 	// return axios.post('http://localhost:3001/user/signup', data);
 }
 
 function postLoginAPI(data) {
-	return axios.post('http://18.191.169.207:3001/user/signin', data);
+	return axios.post(`${url}/user/signin`, data);
 	// return axios.post('http://localhost:3001/user/signin', data);
 }
 

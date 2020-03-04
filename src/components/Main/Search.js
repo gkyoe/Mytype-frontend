@@ -19,6 +19,7 @@ class Search extends Component {
 	}
 
 	render() {
+		console.log(this.state.inputValue);
 		const data = {
 			searchValue: this.state.inputValue
 		};
@@ -28,11 +29,13 @@ class Search extends Component {
 					className="search-input"
 					placeholder="검색어를 입력해주세요"
 					value={this.state.inputValue}
-					onChange={this.handleInputValue}
+					onChange={e => this.handleInputValue(e.target.value)}
 				/>
 				<button
 					className="search-button"
-					onClick={() => MainCategoryActions.postSearchData(data)}
+					onClick={() => {
+						this.props.MainCategoryActions.postSearchData(data);
+					}}
 				>
 					검색
 				</button>
