@@ -185,6 +185,11 @@ class Signup extends Component {
 											e.preventDefault();
 											alert('비밀번호가 일치하지 않습니다.');
 										} else {
+											for (let key in data) {
+												if (data[key] === '') {
+													return alert(`${key}를 입력해주세요.`);
+												}
+											}
 											return LoginActions.postSignup(data);
 										}
 									}}
