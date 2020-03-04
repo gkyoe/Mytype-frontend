@@ -8,7 +8,8 @@ import {
 	MainCategory,
 	MainContentBox,
 	UserCategory,
-	Loginout
+	Loginout,
+	Search
 } from '../components/Main';
 import './Main.css';
 import * as MainCategoryActions from '../modules/changeMainContent';
@@ -46,6 +47,7 @@ class Main extends Component {
 				</div>
 				<div className="col80 float_left">
 					<div className="height100">
+						<Search />
 						<Loginout isLogin={isLogin} />
 					</div>
 					<MainContentBox mainVideo={mainVideo} />

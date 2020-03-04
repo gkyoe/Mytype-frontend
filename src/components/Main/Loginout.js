@@ -8,7 +8,7 @@ import { bindActionCreators } from 'redux';
 let Loginout = props => {
 	if (props.isLogin) {
 		return (
-			<div className="height100">
+			<div>
 				<button
 					onClick={() => {
 						props.LoginActions.logout();
@@ -23,7 +23,7 @@ let Loginout = props => {
 		);
 	} else {
 		return (
-			<div className="height100">
+			<div>
 				<button
 					onClick={() => {
 						props.history.push('/login');

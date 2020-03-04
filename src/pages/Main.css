@@ -37,3 +37,23 @@
 .height100 {
 	height: 100px;
 }
+
+.search-input {
+	width: 600px;
+	height: 40px;
+	position: absolute;
+	top: 50px;
+	left: 400px;
+	font-size: 1em;
+	padding-left: 10px;
+}
+
+.search-button {
+	width: 65px;
+	height: 45px;
+	position: absolute;
+	top: 50px;
+	left: 1010px;
+	font-size: 1.2em;
+	cursor: pointer;
+}
