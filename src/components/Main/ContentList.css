@@ -31,3 +31,14 @@
 	width: 250px;
 	cursor: pointer;
 }
+
+.video-delete-button {
+	border-radius: 15px;
+	width: 30px;
+	height: 30px;
+	font-size: 1em;
+	position: relative;
+	left: 230px;
+	top: 15px;
+	cursor: pointer;
+}

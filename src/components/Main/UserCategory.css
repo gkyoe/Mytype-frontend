@@ -4,12 +4,13 @@
 	width: 230px;
 	height: 400px;
 	text-align: center;
+	border-radius: 5px;
 }
 
 .bottom-position {
 	position: absolute;
 	top: 835px;
-	left: 128px;
+	left: 138px;
 }
 
 .buttonSize {
@@ -37,4 +38,37 @@
 	margin: 5px;
 	width: 60px;
 	height: 30px;
+}
+
+.category-select-box {
+	margin-top: 10px;
+	font-size: 1em;
+	width: 300px;
+	height: 30px;
+}
+
+.add-button-in-modal {
+	width: 70px;
+	height: 35px;
+	font-size: 1.2em;
+	margin-left: 160px;
+	border-radius: 5px;
+}
+
+.close-button-in-modal {
+	width: 70px;
+	height: 35px;
+	font-size: 1.2em;
+	margin-top: 30px;
+	border-radius: 5px;
+}
+
+.modal-title {
+	margin-top: 5px;
+}
+
+.alert-in-modal {
+	color: red;
+	margin-top: 31.72px;
+	margin-bottom: 5.72px;
 }

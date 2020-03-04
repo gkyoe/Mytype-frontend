@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { Home, Login, Main, Signup } from './pages';
+import * as LoginActions from './modules/login';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			isLogin: false
-		};
 	}
 
 	render() {
-		const { isLogin } = this.state;
+		if (localStorage.getItem('token')) {
+			this.props.LoginActions.keepLoginState();
+		}
+		const { isLogin } = this.props;
 		return (
 			<div>
 				<Switch>
@@ -34,4 +37,11 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default connect(
+	state => ({
+		isLogin: state.login.isLogin
+	}),
+	dispatch => ({
+		LoginActions: bindActionCreators(LoginActions, dispatch)
+	})
+)(App);

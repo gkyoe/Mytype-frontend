@@ -5,7 +5,7 @@ import './MainCategory.css';
 const categoryList = [
 	'모태솔로도 헤어지게 만드는 슬픈 노래',
 	'내적댄스를 추게하는 신나는 노래',
-	'불면중을 치료하는 노래',
+	'불면증을 치료하는 노래',
 	'마음을 쓰담쓰담해주는 노래'
 ];
 const MainCategory = () => {
