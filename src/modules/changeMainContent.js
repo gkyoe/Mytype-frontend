@@ -25,6 +25,10 @@ function getVideosAPI(id) {
 	// return axios.get(`http://localhost:3001/videos/${id}`);
 }
 
+function postSearchDataAPI(data) {
+	return axios.post('http://18.191.169.207:3001/videos/search', data);
+}
+
 function postUserCategoryVideosAPI(data) {
 	return axios.post('http://18.191.169.207:3001/user/category', data, {
 		headers: {
@@ -32,6 +36,15 @@ function postUserCategoryVideosAPI(data) {
 		}
 	});
 }
+
+export const postSearchData = data => dispatch => {
+	return postSearchDataAPI(data).then(result => {
+		dispatch({
+			type: CHANGE_MAIN_CONTENT,
+			payload: result.data
+		});
+	});
+};
 
 export const getVideos = (id, callback) => dispatch => {
 	return getVideosAPI(id).then(result => {
