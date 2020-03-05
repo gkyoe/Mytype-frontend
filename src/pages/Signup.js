@@ -31,8 +31,8 @@ class Signup extends Component {
 	// 휴대폰 번호를 입력할 때 자동으로 하이픈('-')이 달리고, 입력 길이 제한이 되는 함수
 	addAutoHypen = str => {
 		str = str.replace(/[^0-9]/g, '');
-		var tmp = '';
-		var maxLength = 11;
+		let tmp = '';
+		const maxLength = 11;
 
 		if (str.length > maxLength) {
 			str = str.slice(0, maxLength);
@@ -62,6 +62,12 @@ class Signup extends Component {
 		return str;
 	};
 
+	// 전화번호에 자동으로 하이픈을 넣어서 출력하고 state를 변경하는 함수
+	handleInputValueAutoHypen = key => e => {
+		e.target.value = this.addAutoHypen(e.target.value);
+		this.setState({ [key]: this.addAutoHypen(e.target.value) });
+	};
+
 	// password 와 repassword 가 일치하는 확인하여 boolean 값 출력하는 함수
 	doesPasswordMatch() {
 		const { password, repassword } = this.state;
@@ -83,12 +89,6 @@ class Signup extends Component {
 		}
 	}
 
-	// 전화번호에 자동으로 하이픈을 넣어서 출력하고 state를 변경하는 함수
-	handleInputValueAutoHypen = key => e => {
-		e.target.value = this.addAutoHypen(e.target.value);
-		this.setState({ [key]: this.addAutoHypen(e.target.value) });
-	};
-
 	render() {
 		const { LoginActions } = this.props;
 		if (this.props.signupResponse === true) {
@@ -99,7 +99,7 @@ class Signup extends Component {
 			alert('이미 존재하는 이메일입니다');
 			LoginActions.initSignupState();
 		}
-		let data = {
+		const data = {
 			email: this.state.email,
 			password: this.state.password,
 			username: this.state.username,

@@ -26,11 +26,6 @@ function UserCategory(props) {
 		setIsOpen(true);
 	}
 
-	// function afterOpenModal() {
-	// 	// references are now sync'd and can be accessed.
-	// 	subtitle.style.color = '#f00';
-	// }
-
 	function closeModal() {
 		setIsOpen(false);
 	}
@@ -60,12 +55,10 @@ function UserCategory(props) {
 			</div>
 			<Modal
 				isOpen={modalIsOpen}
-				// onAfterOpen={afterOpenModal}
 				onRequestClose={closeModal}
 				style={customStyles}
 				contentLabel="Example Modal"
 			>
-				{/* <h2>카테고리추가</h2> */}
 				<ModalBox isDeleteModal={props.isDeleteModal} closeModal={closeModal} />
 			</Modal>
 		</div>

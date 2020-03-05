@@ -18,19 +18,20 @@ const initialState = {
 	isEditing: false,
 	selectedUserCategory: null
 };
+// 'http://localhost:3001'
+// 'http://18.191.169.207:3001'
+const url = 'http://localhost:3001';
 
 function getVideosAPI(id) {
-	// 배포시 수정할 url
-	return axios.get(`http://18.191.169.207:3001/videos/${id}`);
-	// return axios.get(`http://localhost:3001/videos/${id}`);
+	return axios.get(`${url}/videos/${id}`);
 }
 
 function postSearchDataAPI(data) {
-	return axios.post('http://18.191.169.207:3001/videos/search', data);
+	return axios.post(`${url}/videos/search`, data);
 }
 
 function postUserCategoryVideosAPI(data) {
-	return axios.post('http://18.191.169.207:3001/user/category', data, {
+	return axios.post(`${url}/user/category`, data, {
 		headers: {
 			authorization: JSON.stringify(localStorage.getItem('token'))
 		}
