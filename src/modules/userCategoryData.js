@@ -14,7 +14,7 @@ const initialSatate = {
 	userCategoryList: []
 };
 
-const url = 'http://localhost:3001';
+const url = 'http://54.180.85.188:3001';
 
 function postAddUserCategoryAPI(data) {
 	return axios.post(`${url}/user/addCategory`, data, {

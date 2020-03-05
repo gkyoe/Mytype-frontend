@@ -59,10 +59,7 @@ const MainContentBox = props => {
 						</button>
 					)
 				) : (
-					<button
-						onClick={openModal}
-						className="addMyCate margin_right float_right"
-					>
+					<button onClick={openModal} className="addMyCate float_right">
 						내 카테고리에 추가
 					</button>
 				)}
