@@ -1,0 +1,19 @@
+.login_button {
+	margin-top: 15px;
+	margin-right: 100px;
+	text-align: middle;
+	border-radius: 7px;
+	color: whitesmoke;
+	background-color: rgb(162, 163, 166);
+	border: none;
+}
+
+.logout_button {
+	margin-top: 15px;
+	margin-right: 100px;
+	text-align: middle;
+	border-radius: 7px;
+	color: whitesmoke;
+	background-color: rgb(162, 163, 166);
+	border: none;
+}

@@ -11,7 +11,7 @@ const categoryList = [
 const MainCategory = () => {
 	return (
 		<div className="MainCategory">
-			<h3>카테고리</h3>
+			<h3 className="MainCategory-title">카테고리</h3>
 			{categoryList.map(x => (
 				<MainCategoryEntry
 					id={categoryList.indexOf(x) + 1}

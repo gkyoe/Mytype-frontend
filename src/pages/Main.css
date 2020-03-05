@@ -46,6 +46,8 @@
 	left: 400px;
 	font-size: 1em;
 	padding-left: 10px;
+	background-color: rgb(61, 57, 64);
+	border: 3px rgb(41, 39, 43) solid;
 }
 
 .search-button {
@@ -56,4 +58,7 @@
 	left: 1010px;
 	font-size: 1.2em;
 	cursor: pointer;
+	background-color: rgb(61, 57, 64);
+	border: 2px rgb(41, 39, 43) solid;
+	color: lightgray;
 }
