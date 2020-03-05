@@ -60,7 +60,7 @@ td {
 	top: 355px;
 }
 .login-page-title {
-	margin: 100px 0 50px 0;
+	margin: 30px 0 50px 0;
 	color: white;
 }
 
@@ -71,6 +71,7 @@ td {
 	table-layout: fixed;
 	font-size: 12pt;
 	margin-bottom: 10px;
+	margin-right: 12px;
 }
 
 tr {
@@ -106,6 +107,7 @@ td {
 	border-radius: 5px;
 	margin: 10px 5px 0 0;
 	font-size: 1em;
+	cursor: pointer;
 }
 .loginpage-signup-submit-button {
 	width: 80px;
@@ -114,14 +116,18 @@ td {
 	border-radius: 5px;
 	margin: 10px 0 0 5px;
 	font-size: 1em;
+	cursor: pointer;
 }
 
 .google-login-button {
 	position: absolute;
-	left: 840px;
-	top: 355px;
+	left: 837px;
+	top: 435px;
 }
 
 .login-box {
-	border: 1px solid black;
+	border: 1px solid white;
+	margin-top: 150px;
+	width: 500px;
+	height: 360px;
 }

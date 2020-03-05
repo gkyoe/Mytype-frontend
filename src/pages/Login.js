@@ -18,6 +18,13 @@ class Login extends Component {
 			password: ''
 		};
 		this.handleInputValue = this.handleInputValue.bind(this);
+		this.handleEnterButton = this.handleEnterButton.bind(this);
+	}
+
+	handleEnterButton(data) {
+		if (window.event.keyCode === 13) {
+			this.props.LoginActions.postLogin(data);
+		}
 	}
 
 	responseGoogle = res => {
@@ -77,6 +84,7 @@ class Login extends Component {
 								<th className="login-tb-left">비밀번호</th>
 								<td className="login-tb-right">
 									<input
+										onKeyUp={() => this.handleEnterButton(data)}
 										onChange={this.handleInputValue('password')}
 										className="login-input-box"
 										type="password"

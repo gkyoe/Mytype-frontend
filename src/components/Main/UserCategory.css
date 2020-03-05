@@ -43,17 +43,36 @@
 	background-color: rgb(61, 57, 64);
 	color: white;
 	font-size: 1.2em;
+	font-weight: bold;
 }
 
 .category-name-input {
-	width: 280px;
+	width: 290px;
 	height: 35px;
+	margin-top: 10px;
+	font-size: 1em;
 }
 
-.modal-button {
+.modal-button1 {
 	margin: 5px;
-	width: 60px;
-	height: 30px;
+	width: 80px;
+	height: 35px;
+	font-size: 1em;
+	border-radius: 5px;
+	position: relative;
+	left: 120px;
+	top: 15px;
+}
+
+.modal-button2 {
+	margin: 5px;
+	width: 80px;
+	height: 35px;
+	font-size: 1em;
+	border-radius: 5px;
+	position: relative;
+	left: 119px;
+	top: 15px;
 }
 
 .category-select-box {
@@ -61,22 +80,28 @@
 	font-size: 1em;
 	width: 300px;
 	height: 30px;
+	margin-bottom: 25px;
 }
 
 .add-button-in-modal {
-	width: 70px;
+	width: 80px;
 	height: 35px;
 	font-size: 1.2em;
-	margin-left: 160px;
+	position: relative;
 	border-radius: 5px;
+	top: -30px;
+	left: 120px;
 }
 
 .close-button-in-modal {
-	width: 70px;
+	width: 80px;
 	height: 35px;
 	font-size: 1.2em;
 	margin-top: 30px;
 	border-radius: 5px;
+	position: relative;
+	left: 130px;
+	top: -30px;
 }
 
 .modal-title {
@@ -85,6 +110,7 @@
 
 .alert-in-modal {
 	color: red;
-	margin-top: 31.72px;
-	margin-bottom: 5.72px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	font-size: 1.3em;
 }
