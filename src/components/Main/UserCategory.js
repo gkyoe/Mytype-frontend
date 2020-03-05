@@ -32,7 +32,7 @@ function UserCategory(props) {
 
 	return (
 		<div className="UserCategory">
-			<h3>나만의 카테고리</h3>
+			<h3 className="UserCategory-title">나만의 카테고리</h3>
 			{props.userCategoryList.map(x => (
 				<UserCategoryEntry
 					key={props.userCategoryList.indexOf(x)}

@@ -1,24 +1,39 @@
 .UserCategory {
-	background-color: whitesmoke;
-	border: 1px solid black;
+	background-color: rgba(168, 167, 167, 0.4);
+	color: lightgray;
+	/* border: 1px solid black; */
 	width: 230px;
 	height: 400px;
 	text-align: center;
-	border-radius: 5px;
+	border-radius: 10px;
+	font-size: 0.83em;
+	cursor: pointer;
+	/* background-color: rgb(61, 57, 64); */
+	border: 2px rgb(41, 39, 43) solid;
+}
+
+.UserCategory-title {
+	font-size: 1.45em;
 }
 
 .bottom-position {
 	position: absolute;
 	top: 835px;
 	left: 138px;
+	/* background-color: rgb(168, 165, 165); */
 }
 
 .buttonSize {
+	margin: 2px;
 	width: 80px;
 	height: 35px;
 	font-size: 1.2em;
 	cursor: pointer;
+	border: 2px rgba(43, 42, 42, 0.8) solid;
 	border-radius: 5px;
+	background-color: rgb(51, 50, 50, 0.8);
+	color: lightgray;
+	text-align: center;
 }
 
 .user-category-entry-button {

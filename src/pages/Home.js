@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import HomeCategory from '../components/Home/HomeCategory';
 import { Loginout } from '../components/Main';
+import './Home.css';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Home extends Component {
