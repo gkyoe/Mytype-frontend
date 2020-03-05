@@ -4,7 +4,8 @@
 	text-align: middle;
 	border-radius: 7px;
 	color: whitesmoke;
-	background-color: rgb(162, 163, 166);
+	background-color: rgb(76, 58, 89);
+	border: 3px rgb(41, 39, 43) solid;
 	border: none;
 }
 
@@ -14,6 +15,7 @@
 	text-align: middle;
 	border-radius: 7px;
 	color: whitesmoke;
-	background-color: rgb(162, 163, 166);
+	background-color: rgb(76, 58, 89);
+	border: 3px rgb(41, 39, 43) solid;
 	border: none;
 }
