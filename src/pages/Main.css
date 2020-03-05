@@ -2,6 +2,7 @@
 	width: 15%;
 	padding-left: 50px;
 	padding-top: 40px;
+	/* background-color: rgba(245, 205, 247, 0.2); */
 }
 
 .float_left {
@@ -10,6 +11,7 @@
 
 .col80 {
 	width: 80%;
+	/* background-color: rgba(156, 86, 209, 0.2); */
 }
 
 .logout_button {
@@ -46,6 +48,8 @@
 	left: 400px;
 	font-size: 1em;
 	padding-left: 10px;
+	background-color: rgb(61, 57, 64);
+	border: 3px rgb(41, 39, 43) solid;
 }
 
 .search-button {
@@ -56,4 +60,7 @@
 	left: 1010px;
 	font-size: 1.2em;
 	cursor: pointer;
+	background-color: rgb(61, 57, 64);
+	border: 2px rgb(41, 39, 43) solid;
+	color: lightgray;
 }

@@ -59,3 +59,65 @@ td {
 	left: 840px;
 	top: 355px;
 }
+.login-page-title {
+	margin: 100px 0 50px 0;
+	color: white;
+}
+
+.login-table {
+	/* border: 1px solid #bcbcbc; */
+	width: 450px;
+	height: 50px;
+	table-layout: fixed;
+	font-size: 12pt;
+	margin-bottom: 10px;
+}
+
+tr {
+	width: 450px;
+	height: 50px;
+}
+
+.login-tb-left {
+	color: white;
+	width: 20%;
+	font: 8px;
+}
+
+.login-tb-right {
+	/* border: 1px solid #bcbcbc; */
+	width: 80%;
+}
+
+td {
+	/* border: 1px solid #bcbcbc; */
+	width: 400px;
+}
+
+.login-input-box {
+	width: 98%;
+	height: 60%;
+}
+
+.login-submit-button {
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	margin: 10px 5px 0 0;
+	font-size: 1em;
+}
+.loginpage-signup-submit-button {
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	margin: 10px 0 0 5px;
+	font-size: 1em;
+}
+
+.google-login-button {
+	position: absolute;
+	left: 840px;
+	top: 355px;
+}

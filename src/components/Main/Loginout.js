@@ -4,6 +4,7 @@ import * as LoginActions from '../../modules/login';
 import * as UserCategoryDataActions from '../../modules/userCategoryData';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import './Loginout.css';
 
 let Loginout = props => {
 	if (props.isLogin) {
