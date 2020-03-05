@@ -15,6 +15,26 @@ class ModalBox extends Component {
 		};
 		this.handleInputValue = this.handleInputValue.bind(this);
 		this.handleSelectedValue = this.handleSelectedValue.bind(this);
+		this.handleEnterButton = this.handleEnterButton.bind(this);
+	}
+
+	handleEnterButton(data) {
+		if (window.event.keyCode === 13) {
+			this.props.UserCategoryDataActions.postAddUserCategory(data).then(
+				result => {
+					if (result === 'need login') {
+						alert('로그인이 필요합니다.');
+						this.props.LoginActions.logout();
+						localStorage.removeItem('token');
+						this.props.history.push('/login');
+					} else {
+						alert('추가되었습니다.');
+						this.props.UserCategoryDataActions.getUserCategoryList();
+						return this.props.closeModal();
+					}
+				}
+			);
+		}
 	}
 
 	handleInputValue = key => e => {
@@ -116,10 +136,11 @@ class ModalBox extends Component {
 					<input
 						className="category-name-input"
 						placeholder="카테고리명을 입력해주세요"
+						onKeyUp={() => this.handleEnterButton(data)}
 						onChange={this.handleInputValue('inputValue')}
 					/>
 					<button
-						className="modal-button"
+						className="modal-button1"
 						onClick={() => {
 							UserCategoryDataActions.postAddUserCategory(data).then(result => {
 								if (result === 'need login') {
@@ -137,7 +158,7 @@ class ModalBox extends Component {
 					>
 						추가
 					</button>
-					<button className="modal-button" onClick={this.props.closeModal}>
+					<button className="modal-button2" onClick={this.props.closeModal}>
 						닫기
 					</button>
 				</div>

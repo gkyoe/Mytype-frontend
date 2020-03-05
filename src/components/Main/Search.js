@@ -10,12 +10,22 @@ class Search extends Component {
 			inputValue: ''
 		};
 		this.handleInputValue = this.handleInputValue.bind(this);
+		this.handleEnterButton = this.handleEnterButton.bind(this);
 	}
 
 	handleInputValue(value) {
 		this.setState({
 			inputValue: value
 		});
+	}
+
+	handleEnterButton(value) {
+		const data = {
+			searchValue: value
+		};
+		if (window.event.keyCode === 13) {
+			this.props.MainCategoryActions.postSearchData(data);
+		}
 	}
 
 	render() {
@@ -28,6 +38,7 @@ class Search extends Component {
 					className="search-input"
 					placeholder="검색어를 입력해주세요"
 					value={this.state.inputValue}
+					onKeyUp={e => this.handleEnterButton(e.target.value)}
 					onChange={e => this.handleInputValue(e.target.value)}
 				/>
 				<button

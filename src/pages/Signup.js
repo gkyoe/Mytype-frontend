@@ -21,6 +21,13 @@ class Signup extends Component {
 		this.doesPasswordMatch = this.doesPasswordMatch.bind(this);
 		this.renderFeedbackMessage = this.renderFeedbackMessage.bind(this);
 		this.handleInputValueAutoHypen = this.handleInputValueAutoHypen.bind(this);
+		this.handleEnterButton = this.handleEnterButton.bind(this);
+	}
+
+	handleEnterButton(data) {
+		if (window.event.keyCode === 13) {
+			this.props.LoginActions.postSignup(data);
+		}
 	}
 
 	// input에 들어오는 데이터를 state를 입력하는 함수
@@ -172,6 +179,7 @@ class Signup extends Component {
 										name="tel"
 										placeholder="휴대폰 번호를 입력 해주세요"
 										pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+										onKeyUp={() => this.handleEnterButton(data)}
 										onChange={this.handleInputValueAutoHypen('phonenumber')}
 									/>
 								</td>
