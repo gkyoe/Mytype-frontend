@@ -5,16 +5,37 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as LoginActions from '../modules/login';
 import { GoogleLogin } from 'react-google-login';
+import styled from 'styled-components';
 
 class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			googleId: '',
+			googleName: '',
+			provider: '',
 			email: '',
 			password: ''
 		};
 		this.handleInputValue = this.handleInputValue.bind(this);
 	}
+
+	responseGoogle = res => {
+		console.log(res);
+		this.setState({
+			googleId: res.googleId,
+			googleName: res.profileObj.name,
+			provider: 'google'
+		});
+		this.props.LoginActions.postLogin({
+			googleId: res.googleId,
+			googleName: res.profileObj.name
+		});
+	};
+
+	responseFail = err => {
+		console.error(err);
+	};
 
 	handleInputValue = key => e => {
 		this.setState({ [key]: e.target.value });
@@ -77,11 +98,25 @@ class Login extends Component {
 							</button>
 						</Link>
 					</div>
+					<Container>
+						<GoogleLogin
+							className="google-login-button"
+							clientId="97217631103-uarelmceomavabiq17mbo6fu2tuihkmp.apps.googleusercontent.com"
+							buttonText="Google로 로그인하기"
+							onSuccess={this.responseGoogle}
+							onFailure={this.responseFail}
+						/>
+					</Container>
 				</center>
 			</div>
 		);
 	}
 }
+
+const Container = styled.div`
+	display: flex;
+	flex-flow: cloumn wrap;
+`;
 
 Login = connect(
 	state => ({
