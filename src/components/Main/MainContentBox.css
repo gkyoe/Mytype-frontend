@@ -50,3 +50,13 @@
 	background-color: rgb(162, 163, 166);
 	border: none;
 }
+
+.main-title {
+	font-size: 1.6em;
+	margin-right: 17px;
+}
+
+.main-description {
+	font-size: 1.3em;
+	margin-right: 18px;
+}

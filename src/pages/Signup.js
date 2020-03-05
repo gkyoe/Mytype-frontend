@@ -107,99 +107,101 @@ class Signup extends Component {
 		};
 		return (
 			<div>
-				<center>
-					<h2 className="signup-page-title">회원가입</h2>
-					<table className="signup-table">
-						<tr>
-							<th className="signup-tb-left">이메일</th>
-							<td className="signup-tb-right">
-								<input
-									className="signup-input-box"
-									type="email"
-									name="email"
-									placeholder="이메일을 입력 해주세요"
-									onChange={this.handleInputValue('email')}
-								/>
-							</td>
-						</tr>
-						<tr>
-							<th className="signup-tb-left">비밀번호</th>
-							<td className="signup-tb-right">
-								<input
-									className="signup-input-box"
-									type="password"
-									name="password"
-									placeholder="비밀번호를 입력 해주세요"
-									// onChange={this.handleInputValue('password')}
-									onChange={this.handleInputValue('password')}
-								/>
-							</td>
-						</tr>
-						<tr>
-							<th className="signup-tb-left" style={{ fontSize: '11pt' }}>
-								비밀번호 확인
-							</th>
-							<td className="signup-tb-right">
-								<input
-									className="signup-input-box"
-									type="password"
-									name="password"
-									placeholder="비밀번호를 다시 입력 해주세요"
-									onChange={this.handleInputValue('repassword')}
-								/>
-								{this.renderFeedbackMessage()}
-							</td>
-						</tr>
-						<tr>
-							<th className="signup-tb-left">이름</th>
-							<td className="signup-tb-right">
-								<input
-									className="signup-input-box"
-									type="text"
-									name="text"
-									placeholder="이름을 입력해주세요"
-									onChange={this.handleInputValue('username')}
-								/>
-							</td>
-						</tr>
-						<tr>
-							<th className="signup-tb-left">휴대폰번호</th>
-							<td className="signup-tb-right">
-								<input
-									className="signup-input-box"
-									type="tel"
-									name="tel"
-									placeholder="휴대폰 번호를 입력 해주세요"
-									pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
-									onChange={this.handleInputValueAutoHypen('phonenumber')}
-								/>
-							</td>
-						</tr>
-						<tr>
-							<th className="signup-tb-left"></th>
-							<td className="table-right-submit">
-								<button
-									// 여기 다음에 파라미터전달?
-									onClick={e => {
-										if (this.state.password !== this.state.repassword) {
-											e.preventDefault();
-											alert('비밀번호가 일치하지 않습니다.');
-										} else {
-											for (let key in data) {
-												if (data[key] === '') {
-													return alert(`${key}를 입력해주세요.`);
+				<center className="signup-container">
+					<div className="signup-box">
+						<h2 className="signup-page-title">회원가입</h2>
+						<table className="signup-table">
+							<tr>
+								<th className="signup-tb-left">이메일</th>
+								<td className="signup-tb-right">
+									<input
+										className="signup-input-box"
+										type="email"
+										name="email"
+										placeholder="이메일을 입력 해주세요"
+										onChange={this.handleInputValue('email')}
+									/>
+								</td>
+							</tr>
+							<tr>
+								<th className="signup-tb-left">비밀번호</th>
+								<td className="signup-tb-right">
+									<input
+										className="signup-input-box"
+										type="password"
+										name="password"
+										placeholder="비밀번호를 입력 해주세요"
+										// onChange={this.handleInputValue('password')}
+										onChange={this.handleInputValue('password')}
+									/>
+								</td>
+							</tr>
+							<tr>
+								<th className="signup-tb-left" style={{ fontSize: '11pt' }}>
+									비밀번호 확인
+								</th>
+								<td className="signup-tb-right">
+									<input
+										className="signup-input-box"
+										type="password"
+										name="password"
+										placeholder="비밀번호를 다시 입력 해주세요"
+										onChange={this.handleInputValue('repassword')}
+									/>
+									{this.renderFeedbackMessage()}
+								</td>
+							</tr>
+							<tr>
+								<th className="signup-tb-left">이름</th>
+								<td className="signup-tb-right">
+									<input
+										className="signup-input-box"
+										type="text"
+										name="text"
+										placeholder="이름을 입력해주세요"
+										onChange={this.handleInputValue('username')}
+									/>
+								</td>
+							</tr>
+							<tr>
+								<th className="signup-tb-left">휴대폰번호</th>
+								<td className="signup-tb-right">
+									<input
+										className="signup-input-box"
+										type="tel"
+										name="tel"
+										placeholder="휴대폰 번호를 입력 해주세요"
+										pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+										onChange={this.handleInputValueAutoHypen('phonenumber')}
+									/>
+								</td>
+							</tr>
+							<tr>
+								<th className="signup-tb-left"></th>
+								<td className="table-right-submit">
+									<button
+										// 여기 다음에 파라미터전달?
+										onClick={e => {
+											if (this.state.password !== this.state.repassword) {
+												e.preventDefault();
+												alert('비밀번호가 일치하지 않습니다.');
+											} else {
+												for (let key in data) {
+													if (data[key] === '') {
+														return alert(`${key}를 입력해주세요.`);
+													}
 												}
+												return LoginActions.postSignup(data);
 											}
-											return LoginActions.postSignup(data);
-										}
-									}}
-									className="signup-submit-button"
-								>
-									제출
-								</button>
-							</td>
-						</tr>
-					</table>
+										}}
+										className="signup-submit-button"
+									>
+										제출
+									</button>
+								</td>
+							</tr>
+						</table>
+					</div>
 				</center>
 			</div>
 		);

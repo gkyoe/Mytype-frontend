@@ -121,3 +121,7 @@ td {
 	left: 840px;
 	top: 355px;
 }
+
+.login-box {
+	border: 1px solid black;
+}

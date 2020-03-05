@@ -60,4 +60,16 @@ td {
 
 .signup-page-title {
 	color: white;
+	margin-top: 50px;
+}
+
+.signup-box {
+	border: 1px solid black;
+	width: 550px;
+	height: 500px;
+}
+
+.signup-container {
+	position: relative;
+	top: 100px;
 }

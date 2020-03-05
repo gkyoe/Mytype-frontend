@@ -58,47 +58,48 @@ class Login extends Component {
 		return (
 			<div>
 				<center>
-					<h2 className="login-page-title">로그인</h2>
-					<table className="login-table">
-						<tr>
-							<th className="login-tb-left">이메일</th>
-							<td className="login-tb-right">
-								<input
-									onChange={this.handleInputValue('email')}
-									className="login-input-box"
-									type="email"
-									name="email"
-									placeholder="이메일을 입력 해주세요"
-								/>
-							</td>
-						</tr>
-						<tr>
-							<th className="login-tb-left">비밀번호</th>
-							<td className="login-tb-right">
-								<input
-									onChange={this.handleInputValue('password')}
-									className="login-input-box"
-									type="password"
-									name="password"
-									placeholder="비밀번호를 입력 해주세요"
-								/>
-							</td>
-						</tr>
-					</table>
-					<div>
-						<button
-							onClick={() => LoginActions.postLogin(data)}
-							className="login-submit-button"
-						>
-							로그인
-						</button>
-						<Link to="./signup">
-							<button className="loginpage-signup-submit-button">
-								회원가입
+					<div className="login-box">
+						<h2 className="login-page-title">로그인</h2>
+						<table className="login-table">
+							<tr>
+								<th className="login-tb-left">이메일</th>
+								<td className="login-tb-right">
+									<input
+										onChange={this.handleInputValue('email')}
+										className="login-input-box"
+										type="email"
+										name="email"
+										placeholder="이메일을 입력 해주세요"
+									/>
+								</td>
+							</tr>
+							<tr>
+								<th className="login-tb-left">비밀번호</th>
+								<td className="login-tb-right">
+									<input
+										onChange={this.handleInputValue('password')}
+										className="login-input-box"
+										type="password"
+										name="password"
+										placeholder="비밀번호를 입력 해주세요"
+									/>
+								</td>
+							</tr>
+						</table>
+						<div>
+							<button
+								onClick={() => LoginActions.postLogin(data)}
+								className="login-submit-button"
+							>
+								로그인
 							</button>
-						</Link>
-					</div>
-					<Container>
+							<Link to="./signup">
+								<button className="loginpage-signup-submit-button">
+									회원가입
+								</button>
+							</Link>
+						</div>
+						{/* <Container> */}
 						<GoogleLogin
 							className="google-login-button"
 							clientId="97217631103-uarelmceomavabiq17mbo6fu2tuihkmp.apps.googleusercontent.com"
@@ -106,7 +107,8 @@ class Login extends Component {
 							onSuccess={this.responseGoogle}
 							onFailure={this.responseFail}
 						/>
-					</Container>
+						{/* </Container> */}
+					</div>
 				</center>
 			</div>
 		);
@@ -114,8 +116,8 @@ class Login extends Component {
 }
 
 const Container = styled.div`
-	display: flex;
-	flex-flow: cloumn wrap;
+	// display: flex;
+	// flex-flow: cloumn wrap;
 `;
 
 Login = connect(

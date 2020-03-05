@@ -18,11 +18,11 @@ class Home extends Component {
 				<div className="h-buttons">
 					<Loginout isLogin={isLogin} />
 				</div>
-				<center>
+				<center className="home-container">
 					<div>
-						<h1>my type</h1>
+						<h1 className="logo">my type</h1>
 					</div>
-					<div>
+					<div className="home-category-container">
 						<HomeCategory />
 					</div>
 				</center>

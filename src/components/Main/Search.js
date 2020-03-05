@@ -19,7 +19,6 @@ class Search extends Component {
 	}
 
 	render() {
-		console.log(this.state.inputValue);
 		const data = {
 			searchValue: this.state.inputValue
 		};

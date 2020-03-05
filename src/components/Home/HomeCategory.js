@@ -1,32 +1,38 @@
 import React from 'react';
 import HomeCategoryEntry from './HomeCategoryEntry';
 import './HomeCategory.css';
-import sad from './HomeCategoryImage/sad.jpg';
-import dance from './HomeCategoryImage/dance.jpg';
-import carmdown from './HomeCategoryImage/carmdown.png';
-import comfort from './HomeCategoryImage/comfort.jpeg';
+import corona from './HomeCategoryImage/corona.png';
+import vlog from './HomeCategoryImage/vlog.png';
+import eatting from './HomeCategoryImage/eatting.png';
+import travel from './HomeCategoryImage/travel.png';
+import netflix from './HomeCategoryImage/netflix.png';
 
 function HomeCategory() {
 	const data = [
 		{
 			id: 1,
-			title: '모태솔로도 헤어지게 만드는 슬픈노래',
-			image: sad
+			title: '코로나',
+			image: corona
 		},
 		{
 			id: 2,
-			title: '내적댄스를 추게하는 신나는 노래',
-			image: dance
+			title: '브이로그',
+			image: vlog
 		},
 		{
 			id: 3,
-			title: '불면증을 치료하는 노래',
-			image: carmdown
+			title: '먹방',
+			image: eatting
 		},
 		{
 			id: 4,
-			title: '마음을 쓰담쓰담해주는 노래',
-			image: comfort
+			title: '여행',
+			image: travel
+		},
+		{
+			id: 5,
+			title: '넷플릭스 영화추천',
+			image: netflix
 		}
 	];
 

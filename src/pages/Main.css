@@ -16,8 +16,8 @@
 
 .logout_button {
 	position: absolute;
-	top: 70px;
-	left: 1546px;
+	top: 50px;
+	left: 1545px;
 	width: 110px;
 	height: 35px;
 	font-size: 1.2em;
@@ -27,7 +27,7 @@
 
 .login_button {
 	position: absolute;
-	top: 70px;
+	top: 50px;
 	left: 1430px;
 	width: 110px;
 	height: 35px;
@@ -54,10 +54,10 @@
 
 .search-button {
 	width: 65px;
-	height: 45px;
+	height: 48px;
 	position: absolute;
 	top: 50px;
-	left: 1010px;
+	left: 1018px;
 	font-size: 1.2em;
 	cursor: pointer;
 	background-color: rgb(61, 57, 64);

@@ -2,6 +2,7 @@ import { handleActions } from 'redux-actions';
 import axios from 'axios';
 
 const GET_USER_CATEGORY_LIST = 'GET_USER_CATEGORY_LIST';
+const GET_USER_CATEGORY_EMPTY = 'GET_USER_CATEGORY_LIST_EMPTY';
 const POST_VIDEO_TO_USER_CATEGORY = 'POST_VIDEO_TO_USER_CATEGORY';
 const INIT_USER_CATEGORY_LIST = 'INIT_USER_CATEGORY_LIST';
 // const POST_DELETE_USER_CATEGORY = 'POST_DELETE_USER_CATEGORY';
@@ -13,7 +14,7 @@ const initialSatate = {
 	userCategoryList: []
 };
 
-const url = 'http://localhost:3001';
+const url = 'http://54.180.85.188:3001';
 
 function postAddUserCategoryAPI(data) {
 	return axios.post(`${url}/user/addCategory`, data, {
@@ -57,8 +58,7 @@ export const getUserCategoryList = () => dispatch => {
 				});
 			} else if (result.status === 204) {
 				dispatch({
-					type: GET_USER_CATEGORY_LIST,
-					payload: result.data.userCategoryList
+					type: GET_USER_CATEGORY_EMPTY
 				});
 			}
 		})
@@ -128,6 +128,11 @@ export default handleActions(
 			return {
 				...state,
 				userCategoryList: action.payload
+			};
+		},
+		[GET_USER_CATEGORY_EMPTY]: (state, action) => {
+			return {
+				...state
 			};
 		},
 		[POST_VIDEO_TO_USER_CATEGORY]: (state, action) => {

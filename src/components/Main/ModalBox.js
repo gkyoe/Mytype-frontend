@@ -128,6 +128,7 @@ class ModalBox extends Component {
 									localStorage.removeItem('token');
 									this.props.history.push('/login');
 								} else {
+									alert('추가되었습니다.');
 									return UserCategoryDataActions.getUserCategoryList();
 								}
 							});
