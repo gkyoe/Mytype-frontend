@@ -61,6 +61,7 @@ td {
 }
 .login-page-title {
 	margin: 100px 0 50px 0;
+	color: white;
 }
 
 .login-table {
@@ -78,7 +79,7 @@ tr {
 }
 
 .login-tb-left {
-	/* border: 1px solid #bcbcbc; */
+	color: white;
 	width: 20%;
 	font: 8px;
 }

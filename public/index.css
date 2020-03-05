@@ -1,5 +1,5 @@
 body {
-	background-color: black;
-	/* background-image: url('background_img.jpg');
-	background-attachment: scroll; */
+	/* background-color: black; */
+	background-image: url('background_img.jpg');
+	background-attachment: scroll;
 }
