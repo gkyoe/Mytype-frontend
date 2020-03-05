@@ -13,7 +13,7 @@ let UserCategoryEntry = props => {
 					props.MainCategoryActions.postUserCategoryVideos({
 						categoryName: e.target.textContent
 					}).then(result => {
-						if (result === 'need login') {
+						if (result === 'need lozxgin') {
 							alert('로그인이 필요합니다.');
 							props.LoginActions.logout();
 							localStorage.removeItem('token');

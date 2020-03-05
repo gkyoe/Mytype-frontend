@@ -1,5 +1,6 @@
 .UserCategory {
-	background-color: rgba(168, 167, 167, 0.4);
+	background-color: rgb(61, 57, 64);
+	border: 3px rgb(41, 39, 43) solid;
 	color: lightgray;
 	/* border: 1px solid black; */
 	width: 230px;
@@ -8,8 +9,6 @@
 	border-radius: 10px;
 	font-size: 0.83em;
 	cursor: pointer;
-	/* background-color: rgb(61, 57, 64); */
-	border: 2px rgb(41, 39, 43) solid;
 }
 
 .UserCategory-title {
@@ -29,9 +28,8 @@
 	height: 35px;
 	font-size: 1.2em;
 	cursor: pointer;
-	border: 2px rgba(43, 42, 42, 0.8) solid;
 	border-radius: 5px;
-	background-color: rgb(51, 50, 50, 0.8);
+	background-color: rgb(76, 58, 89);
 	color: lightgray;
 	text-align: center;
 }
@@ -42,6 +40,9 @@
 	margin-top: 20px;
 	cursor: pointer;
 	border-radius: 5px;
+	background-color: rgb(61, 57, 64);
+	color: white;
+	font-size: 1.2em;
 }
 
 .category-name-input {
