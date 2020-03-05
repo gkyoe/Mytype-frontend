@@ -37,7 +37,8 @@ const MainContentBox = props => {
 	function closeModal() {
 		setIsOpen(false);
 	}
-	if (mainVideo === 'nonExist') return <h2>추가한 비디오가 없습니다.</h2>;
+	if (mainVideo === 'nonExist')
+		return <h2 className="errorMessageNoneVideo">추가한 비디오가 없습니다.</h2>;
 	return (
 		<div className="MainContentBox">
 			<div className="col62 float_left">
