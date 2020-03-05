@@ -43,11 +43,11 @@
 }
 
 .search-input {
-	width: 600px;
+	width: 780px;
 	height: 40px;
 	position: absolute;
 	top: 50px;
-	left: 400px;
+	left: 341px;
 	font-size: 1em;
 	padding-left: 10px;
 	background-color: rgb(61, 57, 64);
@@ -56,11 +56,11 @@
 }
 
 .search-button {
-	width: 65px;
+	width: 106px;
 	height: 48px;
 	position: absolute;
 	top: 50px;
-	left: 1018px;
+	left: 1140px;
 	font-size: 1.2em;
 	cursor: pointer;
 	background-color: rgb(76, 58, 89);
