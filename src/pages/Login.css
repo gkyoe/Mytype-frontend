@@ -53,3 +53,9 @@ td {
 	margin: 10px 0 0 5px;
 	font-size: 1em;
 }
+
+.google-login-button {
+	position: absolute;
+	left: 840px;
+	top: 355px;
+}
