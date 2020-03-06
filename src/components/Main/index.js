@@ -8,3 +8,4 @@ export { default as Loginout } from './Loginout';
 export { default as ModalBox } from './ModalBox';
 export { default as UserCategoryListModal } from './UserCategoryListModal';
 export { default as Search } from './Search';
+export { default as CheckLogout } from './CheckLogout';

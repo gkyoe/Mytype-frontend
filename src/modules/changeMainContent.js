@@ -19,8 +19,8 @@ const initialState = {
 	selectedUserCategory: null
 };
 // 'http://localhost:3001'
-// 'http://18.191.169.207:3001'
-const url = 'http://54.180.85.188:3001';
+// 'http://54.180.85.188:3001'
+const url = 'http://localhost:3001';
 
 function getVideosAPI(id) {
 	return axios.get(`${url}/videos/${id}`);
