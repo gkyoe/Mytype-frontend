@@ -18,7 +18,7 @@ const initialState = {
 	signupResponse: null
 };
 
-const url = 'http://54.180.85.188:3001';
+const url = 'http://localhost:3001';
 
 function postSignupAPI(data) {
 	return axios.post(`${url}/user/signup`, data);

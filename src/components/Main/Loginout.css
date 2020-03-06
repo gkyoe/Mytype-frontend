@@ -19,3 +19,26 @@
 	border: 3px rgb(41, 39, 43) solid;
 	border: none;
 }
+
+.check-logout-modal {
+	color: red;
+	font-size: 1.4em;
+}
+
+.check-logout-yes {
+	position: relative;
+	width: 70px;
+	height: 35px;
+	font-size: 0.8em;
+	top: 20px;
+	left: 135px;
+}
+
+.check-logout-no {
+	position: relative;
+	width: 70px;
+	height: 35px;
+	font-size: 0.8em;
+	left: 140px;
+	top: 20px;
+}

@@ -14,7 +14,7 @@ const initialSatate = {
 	userCategoryList: []
 };
 
-const url = 'http://54.180.85.188:3001';
+const url = 'http://localhost:3001';
 
 function postAddUserCategoryAPI(data) {
 	return axios.post(`${url}/user/addCategory`, data, {
@@ -132,7 +132,8 @@ export default handleActions(
 		},
 		[GET_USER_CATEGORY_EMPTY]: (state, action) => {
 			return {
-				...state
+				...state,
+				userCategoryList: []
 			};
 		},
 		[POST_VIDEO_TO_USER_CATEGORY]: (state, action) => {
