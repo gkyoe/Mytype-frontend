@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My Type
 
-## Available Scripts
+- My Type 은 사용자가 원하는 유튜브 영상을 자신만의 카테고리로 관리 할 수 있는 웹 어플리케이션입니다.
+- 또한 My type에서 제공하는 기본 추천 카테고리를 이용할 수 있고, 검색기능을 통해 다른 주제의 영상들도 자유롭게 검색이 가능합니다.
+- 로그인, 로그아웃, 회원가입이 가능하여 가입한 유저들에 한해 나만의 카테고리 기능을 사용할 수 있게 하였습니다.
+- 추가로 구글 소셜 로그인을 통해 회원가입 및 로그인의 편의성을 높였습니다.
 
-In the project directory, you can run:
+## | 시연영상 |
 
-### `npm start`
+![MyType 기능시연영상](./readme_image/MyType_기능시연영상.gif)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## | 주요기능 |
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- 로그인, 로그아웃, 회원가입
+- 구글 로그인 API를 통한 소셜 로그인
+- 유튜브 영상 검색
+- 추천 카테고리 영상 랜더
+- 나만의 카테고리 생성
+- 나만의 카테고리에 원하는 영상 추가 및 삭제
 
-### `npm test`
+## | 주요 스택 |
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- react, redux
 
-### `npm run build`
+## | 파일 구조 |
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- pages 폴더: 상위 컴포넌트로 HOME, MAIN, LOGIN, SIGNUP 등 페이지 별 랜더되는 컴포넌트
+- components 폴더: 하위 컴포넌트로 HOME, MAIN 안에서 랜더되는 컴포넌트
+- modules 폴더: redux 액션 정의
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## | React Component Map |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![componentMap](./readme_image/componentMap.png)
