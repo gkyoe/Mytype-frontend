@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { Home, Login, Main, Signup } from './pages';
+import * as LoginActions from './modules/login';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		if (localStorage.getItem('token')) {
+			this.props.LoginActions.keepLoginState();
+		}
+		const { isLogin } = this.props;
+		return (
+			<div>
+				<Switch>
+					<Route path="/home" render={() => <Home />} />
+					<Route path="/login" render={() => <Login />} />
+					<Route path="/main" render={() => <Main />} />
+					<Route path="/signup" render={() => <Signup />} />
+					<Route
+						path="/"
+						render={() => {
+							if (isLogin) {
+								return <Redirect to="/main" />;
+							}
+							return <Redirect to="/Home" />;
+						}}
+					/>
+				</Switch>
+			</div>
+		);
+	}
 }
 
-export default App;
+export default connect(
+	state => ({
+		isLogin: state.login.isLogin
+	}),
+	dispatch => ({
+		LoginActions: bindActionCreators(LoginActions, dispatch)
+	})
+)(App);

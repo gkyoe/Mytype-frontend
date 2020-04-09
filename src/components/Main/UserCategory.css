@@ -1,0 +1,116 @@
+.UserCategory {
+	background-color: rgb(61, 57, 64);
+	border: 3px rgb(41, 39, 43) solid;
+	color: lightgray;
+	/* border: 1px solid black; */
+	width: 230px;
+	height: 400px;
+	text-align: center;
+	border-radius: 10px;
+	font-size: 0.83em;
+	cursor: pointer;
+}
+
+.UserCategory-title {
+	font-size: 1.45em;
+}
+
+.bottom-position {
+	position: absolute;
+	top: 830px;
+	left: 105px;
+	/* background-color: rgb(168, 165, 165); */
+}
+
+.buttonSize {
+	margin: 2px;
+	width: 80px;
+	height: 35px;
+	font-size: 1.2em;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: rgb(76, 58, 89);
+	color: lightgray;
+	text-align: center;
+}
+
+.user-category-entry-button {
+	width: 227px;
+	height: 35px;
+	margin-top: 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: rgb(61, 57, 64);
+	color: white;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.category-name-input {
+	width: 290px;
+	height: 35px;
+	margin-top: 10px;
+	font-size: 1em;
+}
+
+.modal-button1 {
+	margin: 5px;
+	width: 80px;
+	height: 35px;
+	font-size: 1em;
+	border-radius: 5px;
+	position: relative;
+	left: 120px;
+	top: 15px;
+}
+
+.modal-button2 {
+	margin: 5px;
+	width: 80px;
+	height: 35px;
+	font-size: 1em;
+	border-radius: 5px;
+	position: relative;
+	left: 119px;
+	top: 15px;
+}
+
+.category-select-box {
+	margin-top: 10px;
+	font-size: 1em;
+	width: 300px;
+	height: 30px;
+	margin-bottom: 25px;
+}
+
+.add-button-in-modal {
+	width: 80px;
+	height: 35px;
+	font-size: 1.2em;
+	position: relative;
+	border-radius: 5px;
+	top: -30px;
+	left: 120px;
+}
+
+.close-button-in-modal {
+	width: 80px;
+	height: 35px;
+	font-size: 1.2em;
+	margin-top: 30px;
+	border-radius: 5px;
+	position: relative;
+	left: 130px;
+	top: -30px;
+}
+
+.modal-title {
+	margin-top: 5px;
+}
+
+.alert-in-modal {
+	color: red;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	font-size: 1.3em;
+}

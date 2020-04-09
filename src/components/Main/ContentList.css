@@ -1,0 +1,46 @@
+.ContentListEntry {
+	float: left;
+	width: 260px;
+	height: 200px;
+	margin-bottom: 55px;
+}
+
+.ContentList {
+	/* background-color: rgb(76, 58, 89); */
+	height: 240px;
+	width: 1315px;
+	margin-top: 15px;
+	padding: 10px;
+	overflow: auto;
+}
+
+.content-list-entry-title {
+	font-weight: bold;
+	width: 250px;
+	cursor: pointer;
+	color: white;
+}
+
+.content-list-entry-image {
+	width: 250px;
+	height: 150px;
+	cursor: pointer;
+	border: 2px solid rgb(61, 57, 64);
+}
+
+.content-list-entry-description {
+	width: 250px;
+	cursor: pointer;
+	color: lightgrey;
+}
+
+.video-delete-button {
+	border-radius: 15px;
+	width: 30px;
+	height: 30px;
+	font-size: 1em;
+	position: relative;
+	left: 230px;
+	top: 15px;
+	cursor: pointer;
+}

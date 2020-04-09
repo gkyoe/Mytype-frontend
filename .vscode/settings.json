@@ -1,0 +1,6 @@
+{
+	"javascript.format.enable": false,
+	"http.proxy": "",
+	"http.proxyAuthorization": null,
+	"http.proxyStrictSSL": false
+}

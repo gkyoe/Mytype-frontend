@@ -1,0 +1,66 @@
+.float_left {
+	float: left;
+}
+
+.float_right {
+	float: right;
+}
+
+.col62 {
+	width: 62%;
+}
+
+.col28 {
+	width: 28%;
+}
+
+.MainContentBox {
+	height: 550px;
+}
+
+.iframe {
+	width: 900px;
+	height: 500px;
+}
+
+.MainContentDescription {
+	background-color: rgb(61, 57, 64);
+	border: 3px rgb(41, 39, 43) solid;
+	padding-left: 15px;
+	height: 540px;
+	margin-left: 20px;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+	font-size: 0.83em;
+	cursor: pointer;
+}
+
+.margin_right {
+	margin-right: 10px;
+}
+
+.addMyCate {
+	background-color: rgb(76, 58, 89);
+	border: 3px rgb(41, 39, 43) solid;
+	width: 200px;
+	height: 40px;
+	font-size: 1.2em;
+	cursor: pointer;
+	border-radius: 7px;
+	color: whitesmoke;
+}
+
+.main-title {
+	font-size: 1.6em;
+	margin-right: 17px;
+}
+
+.main-description {
+	font-size: 1.3em;
+	margin-right: 18px;
+}
+
+.errorMessageNoneVideo {
+	color: whitesmoke;
+}
