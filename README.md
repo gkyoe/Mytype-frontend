@@ -24,7 +24,7 @@
 
 ## | 파일 구조 |
 
-- pages 폴더: 상위 컴포넌트로 HOME, MAIN, LOGIN, SIGNUP 등 페이지 별 랜더되는 컴포넌트
+- pages 폴더: 상위 컴포넌트로 HOME, MAIN, LOGIN, SIGNUP 등 페이지 컴포넌트
 - components 폴더: 하위 컴포넌트로 HOME, MAIN 안에서 랜더되는 컴포넌트
 - modules 폴더: redux 액션 정의
 
